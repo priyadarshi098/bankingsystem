@@ -23,6 +23,15 @@ spec:
             cpu: "100m"
         ports:
         - containerPort: 9292
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: "jdbc:postgresql://account-db-service:5432/account-db"
+
+        - name: SPRING_DATASOURCE_USERNAME
+          value: "user"
+
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: "password"
 
 ---
 
@@ -31,6 +40,7 @@ kind: Service
 metadata:
   name: account-service
 spec:
+  type: LoadBalancer
   selector:
     app: account-service
   ports:

@@ -32,9 +32,9 @@ public class AccountController {
     public ResponseEntity<AccountDto> fetchAccountDetails(@PathVariable Long userId){
 
         
-        kafkaTemplate.send(KAFKA_USER_ACCOUNT_RETRIEVED, "the account has been retrieved for id: "+userId);
+        // kafkaTemplate.send(KAFKA_USER_ACCOUNT_RETRIEVED, "the account has been retrieved for id: "+userId);
     
-        System.out.println("message=================================qued");
+        // System.out.println("message=================================qued");
         return 
         ResponseEntity
         .ok(
