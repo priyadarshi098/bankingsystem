@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: account-service
-        image: satishpri001/account-service
+        image: satishpri001/account-service:latest
         resources:
           limits:
               memory: "500Mi"
