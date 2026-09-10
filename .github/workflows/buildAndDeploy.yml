@@ -7,8 +7,8 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GKE_CLUSTER: bank
-  GKE_ZONE: asia-southeast1
+  GKE_CLUSTER: bank-demo1
+  GKE_ZONE: us-central1
 
 jobs:
   Build:
